@@ -1,5 +1,5 @@
 import type { Config } from 'tailwindcss';
-
+const colors = require('tailwindcss/colors');
 const config: Config = {
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
@@ -8,5 +8,15 @@ const config: Config = {
   ],
 
   plugins: [],
+};
+module.exports = {
+  theme: {
+    colors: {
+      myBackground: 'var(--bg)',
+      primary: 'var(--primary)',
+      myText: 'var(--text)',
+      myTextSoft: 'var(--textSoft)',
+    },
+  },
 };
 export default config;
